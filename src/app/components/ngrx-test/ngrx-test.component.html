@@ -1,0 +1,11 @@
+<h1>NgRx Await Multiple Actions Test</h1>
+
+<div *ngIf="ngrxTestState$ | async as state">
+  <p><strong>Performing actions</strong> - {{state.performingActions}}</p>
+  <p><strong>Action 1 complete</strong> - {{state.action1Complete}}</p>
+  <p><strong>Action 2 complete</strong> - {{state.action2Complete}}</p>
+  <p><strong>All actions complete</strong> - {{state.allActionsComplete}}</p>
+</div>
+
+<button (click)="performActions()" type="button">Dispatch action</button>
+<button (click)="reset()" type="button">Reset state</button>
